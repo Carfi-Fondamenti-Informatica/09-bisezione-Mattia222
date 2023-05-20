@@ -17,7 +17,7 @@ int main() {
     }while (f(a)*f(b) >= 0);
 
     do{
-        a=(a+b)/2;
+        x=(a+b)/2;
         if (f(x) == 0){
             break;
         }else if (f(a)*f(b) < 0){
