@@ -26,7 +26,7 @@ int main() {
         err = abs((b-a)/2);
     }while (err >= 1e-6);
 
-    cout << x << endl;
+    
     return 0;
 }
 
