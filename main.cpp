@@ -2,12 +2,12 @@
 #include <cmath>
 using namespace std;
 
-double f(double y){
+float f(float y){
     return pow(y,2)*cos(y)+1;
 }
 
 int main() {
-    double a=0, b=0, x=0, err=0;
+    float a=0, b=0, x=0, err=0;
 
     do{
         cout << "inserire estremi" << endl;
@@ -17,7 +17,7 @@ int main() {
     do{
         x=(a+b)/2;
         if (f(x) == 0){
-            break;
+            
         }else if (f(a)*f(b) < 0){
             b=x;
         }else{
@@ -26,7 +26,7 @@ int main() {
         err = abs((b-a)/2);
     }while (err >= 1e-6);
 
-    
+    cout << x;
     return 0;
 }
 
