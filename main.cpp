@@ -17,7 +17,7 @@ int main() {
     do{
         x=(a+b)/2;
         if (f(x) == 0){
-            
+           break;
         }else if (f(a)*f(b) < 0){
             b=x;
         }else{
@@ -26,7 +26,7 @@ int main() {
         err = abs((b-a)/2);
     }while (err >= 1e-6);
 
+    cout.precision(4);
     cout << x;
     return 0;
 }
-
