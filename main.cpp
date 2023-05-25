@@ -27,6 +27,6 @@ int main() {
     }while (err >= 1e-6);
 
     cout.precision(4);
-    cout << x;
+    
     return 0;
 }
