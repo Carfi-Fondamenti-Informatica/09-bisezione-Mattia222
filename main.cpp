@@ -7,7 +7,7 @@ float f(float y){
 }
 
 int main() {
-    float a=0, b=0, x=0, err=0;
+    float a=0, b=0, x=0, err=0, d=0, e=0;
 
     do{
         cout << "inserire estremi" << endl;
@@ -24,11 +24,12 @@ int main() {
             a=x;
         }
         err = abs((b-a)/2);
-    }while (err >= 1e-6);
+    }while (err >= 0.00002);
 
-    int d=10000;
+    x=x*10000;
+    d= int (x);
+    e=d/10000;
+    cout << e;
 
-    x=(x*10000)/d;
-    cout << x;
     return 0;
 }
