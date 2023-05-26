@@ -1,14 +1,14 @@
 #include <iostream>
-#include <math.h>
 #include <cmath>
+
 using namespace std;
 
 float f(float y){
-    return pow(y,2)*cos(y)+1;
+    return ((y*y)*cos(y)+1);
 }
 
 int main() {
-    float a=0, b=0, x=0, err=0, d=0, e=0;
+    float a=0, b=0, x=0, err=0, d, e;
 
     do{
         cout << "inserire estremi" << endl;
@@ -17,14 +17,16 @@ int main() {
 
     do{
         x=(a+b)/2;
-        if (f(x) == 0){
-           break;
-        }else if (f(a)*f(b) < 0){
-            b=x;
+        if(f(x)==0){
+
         }else{
-            a=x;
+            if(f(a)*f(x)<0){
+                b=x;
+            }else if(f(a)*f(b)>0){
+                a=x;
+            }
+            err =abs((b-a)/2);
         }
-        err = abs((b-a)/2);
     }while (err >= 0.00002);
 
     x=x*10000;
